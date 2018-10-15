@@ -25,6 +25,13 @@ it('should return a 0 if input is 0' ,
 })
 
 
+describe('greeting' , () =>{
+  it('shoud return the greeting message' , () =>{
+    const result = lib.greet('hamza')
+    expect(result).toMatch(/hamza/)
+    expect(result).toContain('hamza')
+  })
+})
 
 
 describe('getCurrencies' , () =>{
@@ -51,4 +58,13 @@ describe('getCurrencies' , () =>{
 
   })
 
+})
+
+
+describe('getProduct' , () =>{
+  it('should return a product with given id' , ()=>{
+    const result = lib.getProduct(1);
+    expect(result).toEqual({id : 1 , price : 10});
+    expect(result).toMatchObject({id : 1 , price : 10})
+  })
 })
