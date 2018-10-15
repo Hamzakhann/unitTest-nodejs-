@@ -25,13 +25,6 @@ it('should return a 0 if input is 0' ,
 })
 
 
-describe('greeting' , () =>{
-  it('shoud return the greeting message' , () =>{
-    const result = lib.greet('hamza')
-    expect(result).toMatch(/hamza/)
-    expect(result).toContain('hamza')
-  })
-})
 
 
 describe('getCurrencies' , () =>{
