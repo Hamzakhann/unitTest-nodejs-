@@ -85,4 +85,10 @@ describe('registerUser' , ()=>{
 
     })
   })
+
+  it('should return a user object if valid username is passed' , () =>{
+    const result = lib.registerUser('hamza');
+    expect(result).toMatchObject({username : 'hamza'});
+    expect(result.id).toBeGreaterThan(0);
+  })
 })
