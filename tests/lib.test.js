@@ -69,3 +69,20 @@ describe('getProduct' , () =>{
     expect(result).toHaveProperty('id' , 1)
   })
 })
+
+
+describe('registerUser' , ()=>{
+  it('it should throw an error if username is falsy' , ()=>{
+    //null
+    //undefined
+    //NAN
+    //''
+    //0
+    //FALSE
+    const args = [null , undefined , NaN , '' , 0 , false];
+    args.forEach(a =>{
+      expect(() => {lib.registerUser(a)}).toThrow()
+
+    })
+  })
+})
